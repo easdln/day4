@@ -1,0 +1,18 @@
+[
+    {
+        "caption": "Статьи",
+        "name": "MyGroup",
+        "views": [
+            {
+            "caption": "Статья дохода",
+            "key": "ArticleComingForm",
+            "form": "./forms/ControlsForm"
+            },
+            {
+            "caption": "Статья расхода",
+            "key": "ArticleInComingForm",
+            "form": "./forms/ControlsForm"
+            }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+{
+	"Print to console": {
+		"prefix": "_cl2",
+		"body": [
+			"console.log('$1', $1);"
+		],
+		"description": "console.log('$1', $1)"
+	},
+	"QuerySource load": {
+		"prefix": "_querySourceLoad",
+		"body": [
+			"(new QuerySource($1)).load(qParam)",
+			"	.done(data => {",
+			"		$2",
+			"	})",
+			".fail(data => {",
+			"	this.services.dialog.error(data);",
+			"});"
+		],
+		"description": "QuerySource load"
+	}
+}

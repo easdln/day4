@@ -1,0 +1,5 @@
+<Form title = "Меню" writeRoles='super'>
+  <Layout type="simple">
+    <DocumentsMenu id="documentsMenu" width="100%" editorWidth="12" height="550px" itemClicked="itemClicked" />
+  </Layout>
+</Form>

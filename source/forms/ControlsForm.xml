@@ -1,0 +1,34 @@
+<Form writeRoles='super' title='Статья дохода'>
+    <ToolBar>
+        <Tool id="toolBarItemExit" caption="Закрыть" image="current-theme/images/leftNavBar/close.png" clicked='toolBarItemExit_clicked'/>
+    </ToolBar>
+    <Layout type='bootstrap' >
+        <Group caption='Прайс лист' id='gr3' editorWidth='12' showBorder='true'>
+            <Grid caption='Товары' id='Grid1' editorWidth='6' groupable='true'
+            selectionMode='multiplerows' height='300px' cellClicked='Grid1_cellClicked' cellPainter='Grid1_cellPainter' showAggregates='true' showStatusBar='true'>
+            <ColumnGroup name="group1" text='Товар'>
+                <Column text='Группа' datafield='MaterialGroup' width='25%' >
+                    <TextBox />
+                </Column>
+                <Column text='Наименование' datafield='Material' width='50%' >
+                    <TextBox />
+                </Column>
+            </ColumnGroup>
+            <Column text='Цена' datafield='Price' width='15%' cellsformat='D2' >
+                <NumberInput/>
+                <ColumnAggregate type="avg" />
+            </Column>
+            <Column text="" datafield="Info" editable = 'false' width='40px' hint='Вывести информацию по товару'>
+            <GlyphTextBox imageRenderer='info_imageRenderer'/>
+            </Column>
+            </Grid>
+        <Group caption='' id='gr4' editorWidth='3' showBorder='false'>
+            <Button value='Calc' id='ButtonCalc' captionWidth='0' editorWidth='1'
+            width='100%' clicked='ButtonCalc_clicked' />
+            <Break />
+            <TextBox caption='Результат' id='TextBoxTabRes' captionWidth='1'
+            editorWidth='2' width='100%' />
+        </Group>
+        </Group>
+    </Layout>
+</Form>

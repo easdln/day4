@@ -1,0 +1,11 @@
+
+<Form writeRoles="docflow" title="Главная форма">
+  <Layout>
+    <Group id="lgMenu" editorWidth="4">
+      <Widget id="wMenu" width="100%" height="500px" editorWidth="4" form="./docsMenu" caption="Мои документы"
+        image="current-theme/images/leftNavBar/menu.png" expandedViewName="docsMenu">
+      </Widget>
+    </Group>
+  </Layout>
+
+</Form>

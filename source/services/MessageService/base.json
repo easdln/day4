@@ -1,0 +1,41 @@
+{
+	"save": "Документ сохранен",
+	"emptyField": "Введите значение",
+	"confirmSaveAfterChange": {
+		"text": "Документ был изменён. Сохранить изменения?",
+		"button1": "Сохранить",
+		"button2": "Нет"
+	},
+	"changesSaved":"Изменения сохранены",
+	"invalidValue":"Недопустимое значение",
+	"notAllCondidatsSelected":"Выбраны не все условия",
+	"operationCompletedSuccessfully":"Операция успешно завершена",
+	"noAllRecomendField":"Не все рекомендуемые поля заполнены",
+	"removalProhibite":"Удаление запрещено",
+	"delatePatient":"Удалён пациент",
+	"canNotBeSaved":"Нельзя сохранить",
+	"thereEmptyFields":"Не все данные заполнены",
+	"deleted": "Удалено",
+	"infoChanged": "Информация изменена",
+	"toChangeValue": "Выберите значение",
+	"departmentChanged": "Отделение изменено",
+	"infoBeforeUpdate": "Внимание! Через ${(param || {}).minutes || ''} мин начнутся технические работы. Сайт может быть недоступен некоторое время. Сохраните все изменения.",
+	"confirmDeleteAfterChange": {
+		"text": "Уверены что хотите удалить?",
+		"button1": "да",
+		"button2": "Нет"
+	},
+	"noAccess": "Доступ запрещён",
+	"createEndDateOneTimeVisit":"Установите дату окончания для разового посещения",
+	"NoNotes":"Заполните поле Примечание",
+	"error": "Ошибка",
+	"DuplicateLines":"Повторяющиеся строки в таблице",
+	"noData":"Нет данных",
+	"PleaseWait":"Пожалуйста, подождите",
+	"incorrectValue":"Некорректное значение",
+	"noPeriod":"Не указан период",
+	"incorrectValueDate":"Некорректное значение периода",
+	"noTepe":"Не указан тип",
+	"fillData":"Заполните поле дата",
+	"saveAnswer":"Ответ сохранен"
+}

@@ -1,0 +1,156 @@
+{
+	"templateForm": {
+		"prefix": "_templateForm",
+		"body": [
+			"<Form writeRoles='super' title=\"\">",
+			"\t<ToolBar>",
+			"\t\t<Tool caption=\"Сохранить\" image=\"current-theme/images/leftNavBar/save.png\" clicked=\"SaveToolbarItem_clicked\" />",
+			"\t</ToolBar>",
+			"\t<Layout>",
+			"\t</Layout>",
+		"</Form>"
+		],
+		"description": "шаблон разметки Формы"
+	},
+
+	"Tool": {
+		"prefix": "_Tool",
+		"body": [
+			"<Tool caption=\"$1\" id=\"$2ToolbarItem\" image=\"current-theme/images/leftNavBar/$3.png\" clicked=\"$2ToolbarItem_clicked\" />"
+		],
+		"description": "Текстовое поле"
+	},
+
+	"column": {
+		"prefix": "_column",
+		"body": [
+			"<Column text='$1' datafield='$2' width='$3%' >",
+			"\t$4",
+			"</Column>"
+		],
+		"description": "добавление колонки"
+	},
+
+	"TextBox": {
+		"prefix": "_TextBox",
+		"body": [
+			"<TextBox caption='$1' bind='$2' id='TextBox$2' captionWidth='1' editorWidth='$3' width='100%' valueChanged='TextBox$2_valueChanged' />"
+		],
+		"description": "Текстовое поле"
+	},
+	"TextBox in Column": {
+		"prefix": "_TextBoxInColumn",
+		"body": [
+			"<TextBox />"
+		],
+		"description": "Текстовое поле в колонке"
+	},
+
+	"Button": {
+		"prefix": "_Button",
+		"body": [
+			"<Button value='$1' id='Button$2' captionWidth='0' editorWidth='$3' width='100%' clicked='Button$2_clicked' />"
+		],
+		"description": "Кнопка"
+	},
+
+	"GlyphButton": {
+		"prefix": "_GlyphButton",
+		"body": [
+			"<GlyphButton value='$1' id='GlyphButton$2' image='$3' captionWidth='0' editorWidth='$4' width='100%' clicked='GlyphButton$2_clicked' />"
+		],
+		"description": "Кнопка с картинкой"
+	},
+
+	"CheckBox": {
+		"prefix": "_CheckBox",
+		"body": [
+			"<CheckBox caption='$1' bind='$2' id='CheckBox$2' captionWidth='1' editorWidth='1' width='100%' valueChanged='CheckBox$2_valueChanged' />"
+		],
+		"description": "Галочка"
+	},
+	"CheckBoxInColumn": {
+		"prefix": "_CheckBoxInColumn",
+		"body": [
+			"<CheckBox />"
+		],
+		"description": "Галочка в колонке"
+	},
+
+	"Lookup": {
+		"prefix": "_Lookup",
+		"body": [
+			"<Lookup caption='$1' bind='$2' id='Lookup$2' dataSource='$3' showValueMember='false' captionWidth='1' editorWidth='$4' width='100%' valueChanged='Lookup$2_valueChanged' />"
+		],
+		"description": "лукап"
+	},
+	"LookupInColumn": {
+		"prefix": "_LookupInColumn",
+		"body": [
+			"<Lookup dataSource='$1' showValueMember='false' />"
+		],
+		"description": "лукап в колонке"
+	},
+
+	"Group": {
+		"prefix": "_Group",
+		"body": [
+			"<Group caption='$1' id='$2' editorWidth='$3' showBorder='false'>$4</Group>"
+		],
+		"description": "группа"
+	},
+
+	"Memo": {
+		"prefix": "_Memo",
+		"body": [
+			"<Memo caption='$1' bind='$2' id='Memo$2' controlRows='8' format='html' captionWidth='0' editorWidth='12' width='100%' valueChanged='Memo$2_valueChanged' />"
+		],
+		"description": "мемо поле"
+	},
+
+	"NumberInput": {
+		"prefix": "_NumberInput",
+		"body": [
+			"<NumberInput caption='$1' bind='$2' id='NumberInput$2' width='100%' captionWidth='1' editorWidth='1' valueChanged='NumberInput$2_valueChanged' />"
+		],
+		"description": "Поле ввода числа"
+	},
+	"NumberInputInColumn": {
+		"prefix": "_NumberInputInColumn",
+		"body": [
+			"<NumberInput />"
+		],
+		"description": "Поле ввода числа в колонке"
+	},
+
+	"DateTimeInput": {
+		"prefix": "_DateTimeInput",
+		"body": [
+			"<DateTimeInput caption='$1' bind='$2' id='DateTimeInput$2' format='dd.MM.yyyy HH:mm' bindingMode='date' width='100%' captionWidth='1' editorWidth='1' valueChanged='DateTimeInput$2_valueChanged' />"
+		],
+		"description": "Поле ввода даты"
+	},
+	"DateTimeInputInColumn": {
+		"prefix": "_DateTimeInputInColumn",
+		"body": [
+			"<DateTimeInput />"
+		],
+		"description": "Поле ввода даты в колонке"
+	},
+
+	"Break": {
+		"prefix": "_Break",
+		"body": [
+			"<Break />"
+		],
+		"description": "Break"
+	},
+
+	"Grid": {
+		"prefix": "_Grid",
+		"body": [
+			"<Grid id='$1' editorWidth='$2' readOnly='true' selectionMode='singlecell'></Grid>"
+		],
+		"description": "Grid"
+	}
+}

@@ -1,0 +1,54 @@
+{
+  "name": "LexPractice",
+  "version": "0.0.1",
+  "description": "Lexema 84 LexPractice",
+  "private": true,
+  "main": "source/index.js",
+  "scripts": {
+    "build:lib": "cross-env NODE_CONFIG_DIR=./config lexema8-cli build lib",
+    "build:docs": "cross-env NODE_CONFIG_DIR=./config lexema8-cli build docs",
+    "deploy:docs": "lexema8-cli deploy docs",
+    "initial": "lexema8-cli initial",
+    "start": "lexema8-cli start",
+    "dev": "cross-env LX_ENV=develop NODE_CONFIG_DIR=./config NODE_OPTIONS=--max_old_space_size=4096 lexema8-cli start -i",
+    "dev:ie": "cross-env LX_ENV=develop NODE_CONFIG_DIR=./config NODE_OPTIONS=--max_old_space_size=4096 lexema8-cli start --ie",
+    "dev:production": "cross-env LEX_ENV=production lexema8-cli start",
+    "build:roles": "cross-env NODE_CONFIG_DIR=./config lexema8-cli build roles",
+    "build:client": "cross-env NODE_CONFIG_DIR=./config lexema8-cli build client",
+    "demo:test": "mocha tests -t 30000",
+    "build:reports": "lexema8-cli build reports",
+    "build:logic": "lexema8-cli build logic",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard",
+    "report": "cross-env NODE_CONFIG_DIR=./config lexema8-cli report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gogs.lex.lan:LexSchool/LexPractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "5.0.5",
+    "ecosoft-lexema8": "4.0.0-alfa.113",
+    "ecosoft-lexema8-jsreport-service": "0.1.4",
+    "ecosoft-lexema8-main-theme": "1.15.4",
+    "eslint": "5.1.0",
+    "jsreport-html-embedded-in-docx": "^2.2.0",
+    "report": "^0.1.1",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.0.1",
+    "jsreport-debug": "2.0.2",
+    "jsreport-express": "2.2.4",
+    "jsreport-studio": "2.3.3",
+    "ecosoft-lexema8-configuration-service": "0.4.4",
+    "ecosoft-lexema8-logic-service": "0.2.4",
+    "ecosoft-lexema8-preview-creator-service": "0.2.4",
+    "ecosoft-lexema8-scheduler-service": "0.1.4"
+  },
+  "publishConfig": {
+    "registry": "http://npm.lex.lan"
+  }
+}

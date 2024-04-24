@@ -1,0 +1,86 @@
+{
+	"model Template": {
+		"prefix": "_modelTemplate",
+		"body": [
+			"{",
+			"\t\"dbName\": \"${1:tableName}\",",
+			"\t\"viewName\": \"\",",
+			"\t\"typeName\": \"${1:tableName}\",",
+			"\t\"primaryKeyDomain\": \"${1:tableName}\",",
+			"\t\"storeHistory\": true,",
+			"\t\"primaryKeyProperty\": \"VCode\",",
+			"\t\"description\": \"${2:description}\",",
+			"\t\"properties\": {",
+			"\t\t\"VCode\": {",
+			"\t\t\t\"dbName\": \"VCode\",",
+			"\t\t\t\"viewName\": \"VCode\",",
+			"\t\t\t\"type\": \"bigint\"",
+			"\t\t}",
+			"\t},",
+			"\t\"details\": {},",
+			"\t\"rights\": {",
+			"\t\t\"create\": [\"super\"],",
+			"\t\t\"read\": [\"super\"],",
+			"\t\t\"update\": [\"super\"],",
+			"\t\t\"delete\": [\"super\"]",
+			"\t}",
+			"}"
+		],
+		"description": "шаблон модели"
+	},
+	"queryTemplate": {
+		"prefix": "_queryTemplate",
+		"body": [
+			"{",
+			"\t\"select\": {",
+			"\t\t\"text\": \"\",",
+			"\t\t\"parameters\": [\"vcode\"]",
+			"\t},",
+			"\t\"insert\": {",
+			"\t\t\"text\": \"\",",
+			"\t\t\"parameters\": [\"vcode\"]",
+			"\t},",
+			"\t\"update\": {",
+			"\t\t\"text\": \"\",",
+			"\t\t\"parameters\": [\"vcode\"]",
+			"\t},",
+			"\t\"delete\": {",
+			"\t\t\"text\": \"\",",
+			"\t\t\"parameters\": [\"vcode\"]",
+			"\t},",
+			"\t\"parameters\": {",
+			"\t\t\"vcode\": \"string\"",
+			"\t},",
+			"\t\"rights\": {",
+			"\t\t\"create\": [],",
+			"\t\t\"read\": [],",
+			"\t\t\"update\": [],",
+			"\t\t\"delete\": []",
+			"\t}",
+			"}"
+		],
+		"description": "шаблон запроса"
+	},
+	"model Property": {
+		"prefix": "_modelProperty",
+		"body": [
+			"\"${1:columnName}\": {",
+			"\t\"dbName\": \"${1:columnName}\",",
+			"\t\"viewName\": \"${1:columnName}\",",
+			"\t\"type\": \"${2:columnType}\",",
+			"\t\"description\": \"${3:columnDescription}\"",
+			"}"
+		],
+		"description": "свойство модели"
+	},
+	"model Detail": {
+		"prefix": "_modelDetail",
+		"body": [
+			"\"${1:detailName}\": {",
+			"\t\"foreignKeyProperty\": \"PCode\",",
+			"\t\"type\": \"${2:detailModel}\"",
+			"}"
+		],
+		"description": "детейл модели"
+	}
+}
