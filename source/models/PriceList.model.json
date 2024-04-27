@@ -1,0 +1,32 @@
+{
+    "dbName": "PriceList",
+    "typeName": "PriceList",
+    "primaryKeyDomain": "PriceList",
+    "storeHistory": false,
+    "primaryKeyProperty": "VCode",
+    "dateProperty": "DocumentDate",
+    "description": "",
+    "properties": {
+        "VCode": {
+        "dbName": "VCode",
+        "type": "bigint"
+        },
+        "DocumentDate": {
+        "dbName": "DocumentDate",
+        "type": "date",
+        "description": "дата документа"
+        }
+    },
+    "details": {
+    "Detail": {
+    "foreignKeyProperty": "PCode",
+    "type": "./PriceListDetail.model.json"
+    }
+    },
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

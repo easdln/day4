@@ -1,0 +1,31 @@
+<Form writeRoles='super' title='Прайс листы - Аналитическая форма'>
+    <ToolBar>
+        <Tool id="toolBarItemExit" caption="Закрыть" image="current-theme/images/leftNavBar/close.png" clicked='toolBarItemExit_clicked'/>
+        <Tool id="toolBarItemSearch" caption="Загрузить" image="current-theme/images/leftNavBar/load.png" clicked= 'toolBarItemSearch_clicked'/>
+    </ToolBar>
+    <Layout type='bootstrap' >
+        <Group id='gr1' editorWidth='12' showBorder='true' >
+        <Lookup caption='Товар' id='LookupMaterial'
+            dataSource='../queries/Material.query.json' showValueMember='false'
+            captionWidth='1' editorWidth='2' width='100%' />
+        </Group>
+        <Group caption='Результат' id='gr2' editorWidth='12' >
+            <Grid caption='Товары' id='Grid1' bind='Detail' editorWidth='12' selectionMode='multiplecellsadvanced' height='400px' toolbarVisible='false' >
+                <Column text='Дата документа' datafield='DocumentDate' cellsformat='dd.MM.yyyy' width='10%' >
+                    <DateTimeInput />
+                </Column>
+                <ColumnGroup name="group1" text='Товар'>
+                    <Column text='Группа' datafield='MaterialGroup' width='15%' >
+                        <TextBox />
+                    </Column>
+                    <Column text='Наименование' datafield='Material' width='50%' >
+                        <TextBox />
+                    </Column>
+                </ColumnGroup>
+                <Column text='Цена' datafield='Price' width='15%' cellsformat='D2' >
+                    <NumberInput />
+                </Column>
+            </Grid>
+        </Group>
+    </Layout>
+</Form>

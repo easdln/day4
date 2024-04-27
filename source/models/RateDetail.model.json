@@ -1,0 +1,40 @@
+{
+    "dbName": "MovementDetail",
+    "viewName": "",
+    "typeName": "MovementDetail",
+    "primaryKeyDomain": "MovementDetail",
+    "storeHistory": false,
+    "primaryKeyProperty": "VCode",
+    "description": "Расход",
+    "properties": {
+    "VCode": {
+        "dbName": "VCode",
+        "type": "bigint"
+    },
+    "PCode": {
+        "dbName": "PCode",
+        "type": "bigint"
+    },
+    "Sum": {
+        "dbName": "Sum",
+        "type": "double"
+    },
+    "File": {
+        "dbName": "File",
+        "type": "longstring"
+    },
+    "Article": {
+        "dbName": "ArticleOut",
+        "viewName": "ArticleOut",
+        "type": "./ArticleOut.model.json",
+        "description": "группа"
+    }
+    },
+    "details": {},
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

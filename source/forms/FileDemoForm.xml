@@ -1,0 +1,16 @@
+<Form writeRoles='Super' title='File Demo'>
+    <ToolBar>
+        <Tool id="toolBarItemExit" caption="Закрыть" image="current-theme/images/leftNavBar/close.png" clicked='toolBarItemExit_clicked'/>
+    </ToolBar>
+    <Layout type='bootstrap' >
+        <Group id='gr1' editorWidth='12' >
+            <Button value='Загрузить' id='ButtonUpload' captionWidth='0' editorWidth='1'
+                width='100%' clicked='ButtonUpload_clicked' />
+            <Break />
+            <FileUpload id='FileUpload1' captionWidth='0' editorWidth='1'
+            valueChanged='FileUpload1_valueChanged' />
+        </Group>
+        <Break />
+        <CustomImage id="CustomImage1" editorWidth='6' valueChanged='CustomImage1_valueChanged'/>
+    </Layout>
+</Form>

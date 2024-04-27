@@ -1,0 +1,38 @@
+<Form writeRoles='super' title='Chart HW'>
+    <ToolBar>
+        <Tool id="toolBarItemExit" caption="Загрузить" image="current-theme/images/leftNavBar/search.png" clicked='toolBarItemExit_clicked'/>
+        <Tool caption="Печатная форма" id="toolBarItemChartShow" image="current-theme/images/leftNavBar/search.png" clicked='toolBarItemChartShow_clicked' />
+    </ToolBar>
+    <Layout type='bootstrap'>
+        <Group id='group1' editorWidth='6'>
+            <DateTimeInput id="DateTimeInputBDate" caption="Период с" captionWidth="1" editorWidth="1" />
+            <DateTimeInput id="DateTimeInputEDate" caption="по" captionWidth="1" editorWidth="1" />
+            <Grid id='Grid1' editorWidth='6' selectionMode='multiplerows'
+            height='400px' groupable='true' showAggregates='true' showStatusBar='true' cellPainter='Grid1_cellPainter'>
+                <ColumnGroup name="group1" text='Товар'>
+                    <Column text='Тип' datafield='Type' width='25%' >
+                        <TextBox />
+                    </Column>
+                    <Column text='Статья' datafield='Name' width='25%' >
+                        <TextBox />
+                    </Column>
+                </ColumnGroup>
+                <Column text='Дата' datafield='Date' width='25%'>
+                    <DateTimeInput />
+                </Column>
+                <Column text='Сумма' datafield='Price' width='25%' cellsformat='D2' >
+                    <NumberInput />
+                </Column>
+            </Grid>
+        </Group>
+        <Group id='group2' editorWidth='6'>
+            <Chart id="chart1" editorWidth="6" width="100%" title="Товары" height="500px"
+            colorScheme="scheme03" description="Диаграмма товара" clicked='chart1_clicked'>
+                <SeriesGroup displayValueAxis="true" type="pie">
+                    <Series dataField="Value" displayText="Group" />
+                </SeriesGroup>
+            </Chart>
+        </Group>
+
+    </Layout>
+</Form>

@@ -1,0 +1,33 @@
+{
+    "dbName": "Article",
+    "viewName": "",
+    "typeName": "Article",
+    "primaryKeyDomain": "Article",
+    "typeNameProperty": "ArticleOut",
+    "storeHistory": false,
+    "primaryKeyProperty": "VCode",
+    "description": "Статья расходов",
+    "properties": {
+    "VCode": {
+        "dbName": "VCode",
+        "type": "bigint"
+    },
+    "Name": {
+        "dbName": "Name",
+        "type": "string",
+        "description": "Статья расходов"
+    },
+    "ArticleOut": {
+        "dbName": "ArticleOut",
+        "viewName": "",
+        "type": "string"
+        }
+    },
+    "details": {},
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

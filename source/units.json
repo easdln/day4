@@ -1,18 +1,112 @@
 [
     {
-        "caption": "Статьи",
+        "caption": "Моя группа",
         "name": "MyGroup",
         "views": [
             {
-            "caption": "Статья дохода",
-            "key": "ArticleComingForm",
-            "form": "./forms/ControlsForm"
+                "caption": "Чарт",
+                "key": "ChartForm",
+                "form": "./forms/ChartForm"
             },
             {
-            "caption": "Статья расхода",
-            "key": "ArticleInComingForm",
-            "form": "./forms/ControlsForm"
+                "caption": "Файл",
+                "key": "FileDemoForm",
+                "form": "./forms/FileDemoForm"
             }
         ]
-    }
+    },
+    {
+        "caption": "Статьи",
+        "name": "States",
+        "views": [
+            {
+                "caption": "",
+                "key": "ArticleComingForm",
+                "form": "./forms/ArticleComingForm"
+            },
+            {
+                "caption": "",
+                "key": "ArticleInComingForm",
+                "form": "./forms/ArticleInComingForm"
+            },
+            {
+                "caption": "Статья дохода",
+                "key": "ArticleInRegistry",
+                "form": "./forms/ArticleInRegistry"
+            },
+            {
+                "caption": "Статья расхода",
+                "key": "ArticleOutRegistry",
+                "form": "./forms/ArticleOutRegistry"
+            }
+        ]
+    },
+    {
+        "caption": "Приход/Расход",
+        "name": "MovementForm",
+        "views": [
+            {
+            "caption": "",
+            "key": "MovementComingForm",
+            "form": "./forms/MovementComingForm"
+            },
+            {
+            "caption": "",
+            "key": "MovementInComingForm" ,
+            "form": "./forms/MovementInComingForm"
+            },
+            {
+            "caption": "Поступление денежных средств",
+            "key": "MovementComingRegistry",
+            "form": "./forms/MovementComingRegistry"
+            },
+            {
+            "caption": "Расход денежных средств",
+            "key": "MovementInComingRegistry" ,
+            "form": "./forms/MovementInComingRegistry"
+            },
+            {
+            "caption": "Модель",
+            "key": "ModelDemoForm",
+            "form": "./forms/ModelDemoForm"
+            }
+        ]
+    },
+    {
+        "caption": "Аналитические формы",
+        "name": "AnalyticalForm",
+        "views": [
+            {
+            "caption": "Движение средств",
+            "key": "AnalyticalForm",
+            "form": "./forms/AnalyticalForm"
+            }
+        ]
+    },
+    {
+        "caption": "ДЗ",
+        "name": "MyHW",
+        "views": [
+            {
+                "caption": "Чарт для дз",
+                "key": "ChartFormHw",
+                "form": "./forms/AnalyticalFormHw"
+            },
+            {
+                "caption": "",
+                "key": "PriceListForm",
+                "form": "./forms/PriceListForm"
+            },
+            {
+                "caption": "Прайс лист",
+                "key": "PriceListRegistry",
+                "form": "./forms/PriceListRegistry"
+            },
+            {
+                "caption": "Прайс лист - Аналитическая форма",
+                "key": "PriceListAnalytForm",
+                "form": "./forms/PriceListAnalytForm"
+            }     
+        ]
+    }  
 ]

@@ -1,0 +1,13 @@
+{
+    "select": {
+        "text": "./Material.sql"
+    },
+    "parameters": {
+    },
+    "rights": {
+    "create": [],
+    "read": ["super"],
+    "update": [],
+    "delete": []
+    }
+}

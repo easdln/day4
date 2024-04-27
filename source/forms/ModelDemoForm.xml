@@ -1,17 +1,17 @@
-<Form writeRoles='super' title='Статья дохода'>
+<Form writeRoles='super' title='Model Demo'>
     <ToolBar>
         <Tool id="toolBarItemExit" caption="Закрыть" image="current-theme/images/leftNavBar/close.png" clicked='toolBarItemExit_clicked'/>
     </ToolBar>
     <Layout type='bootstrap' >
         <Group caption='Прайс лист' id='gr3' editorWidth='12' showBorder='true'>
             <Grid caption='Товары' id='Grid1' editorWidth='6' groupable='true'
-            selectionMode='multiplerows' height='300px' cellClicked='Grid1_cellClicked' cellPainter='Grid1_cellPainter' showAggregates='true' showStatusBar='true'>
+            selectionMode='multiplerows' height='600px' cellClicked='Grid1_cellClicked' cellPainter='Grid1_cellPainter' showAggregates='true' showStatusBar='true' cellValueChanged='Grid1_cellValueChanged'>
             <ColumnGroup name="group1" text='Товар'>
                 <Column text='Группа' datafield='MaterialGroup' width='25%' >
                     <TextBox />
                 </Column>
                 <Column text='Наименование' datafield='Material' width='50%' >
-                    <TextBox />
+                    <Lookup dataSource='../models/Material.model.json' showValueMember='false' />
                 </Column>
             </ColumnGroup>
             <Column text='Цена' datafield='Price' width='15%' cellsformat='D2' >
@@ -25,6 +25,10 @@
         <Group caption='' id='gr4' editorWidth='3' showBorder='false'>
             <Button value='Calc' id='ButtonCalc' captionWidth='0' editorWidth='1'
             width='100%' clicked='ButtonCalc_clicked' />
+            <Break />
+            <Lookup caption='Группа' id='LookupMaterialGroup'
+                dataSource='../models/MaterialGroup.model.json' showValueMember='false'
+                captionWidth='1' editorWidth='2' />
             <Break />
             <TextBox caption='Результат' id='TextBoxTabRes' captionWidth='1'
             editorWidth='2' width='100%' />

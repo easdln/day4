@@ -1,0 +1,36 @@
+{
+    "dbName": "Movement",
+    "viewName": "",
+    "typeName": "Movement",
+    "primaryKeyDomain": "Movement",
+    "typeNameProperty": "Rate",
+    "storeHistory": false,
+    "primaryKeyProperty": "VCode",
+    "description": "Расход",
+    "properties": {
+    "VCode": {
+        "dbName": "VCode",
+        "type": "bigint"
+        },
+        "Rate": {
+            "dbName": "Rate",
+            "type": "string"
+        },
+        "DocumentDate": {
+            "dbName": "DocumentDate",
+            "type": "dateTimeOffset"
+        }
+    },
+    "details": {
+        "Detail": {
+            "foreignKeyProperty": "PCode",
+            "type": "./RateDetail.model.json"
+        }
+    },
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

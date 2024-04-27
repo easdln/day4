@@ -1,0 +1,37 @@
+{
+    "dbName": "PriceListDetail",
+    "typeName": "PriceListDetail",
+    "primaryKeyDomain": "PriceListDetail",
+    "storeHistory": true,
+    "primaryKeyProperty": "VCode",
+    "description": "",
+    "properties": {
+        "VCode": {
+        "dbName": "VCode",
+        "type": "bigint"
+        },
+        "PCode": {
+        "dbName": "PCode",
+        "type": "bigint"
+        },
+        "MaterialGroup": {
+        "dbName": "MaterialGroup",
+        "type": "string"
+        },
+        "Material": {
+        "dbName": "Material",
+        "type": "./Material.model.json"
+        },
+        "Price": {
+        "dbName": "Price",
+        "type": "money"
+        }
+    },
+    "details": {},
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

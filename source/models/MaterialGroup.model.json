@@ -1,0 +1,29 @@
+{
+    "dbName": "MaterialGroup",
+    "viewName": "",
+    "typeName": "MaterialGroup",
+    "primaryKeyDomain": "MaterialGroup",
+    "storeHistory": false,
+    "primaryKeyProperty": "VCode",
+    "description": "Справочник групп товаров",
+    "properties": {
+        "VCode": {
+        "dbName": "VCode",
+        "viewName": "VCode",
+        "type": "bigint"
+        },
+        "Name": {
+        "dbName": "MaterialGroup",
+        "viewName": "Name",
+        "type": "string",
+        "description": "Наименование"
+        }
+    },
+    "details": {},
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

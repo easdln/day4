@@ -1,0 +1,36 @@
+{
+    "dbName": "Movement",
+    "viewName": "",
+    "typeName": "Movement",
+    "primaryKeyDomain": "Movement",
+    "typeNameProperty": "Coming",
+    "storeHistory": false,
+    "primaryKeyProperty": "VCode",
+    "description": "Приход",
+    "properties": {
+    "VCode": {
+        "dbName": "VCode",
+        "type": "bigint"
+        },
+        "Coming": {
+            "dbName": "Coming",
+            "type": "string"
+        },
+        "DocumentDate": {
+            "dbName": "DocumentDate",
+            "type": "dateTimeOffset"
+        }
+    },
+    "details": {
+        "Detail": {
+            "foreignKeyProperty": "PCode",
+            "type": "./ComingDetail.model.json"
+        }
+    },
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

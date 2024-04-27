@@ -1,0 +1,33 @@
+{
+    "dbName": "Article",
+    "viewName": "",
+    "typeName": "Article",
+    "primaryKeyDomain": "Article",
+    "typeNameProperty": "ArticleIn",
+    "storeHistory": false,
+    "primaryKeyProperty": "VCode",
+    "description": "Справочник товаров",
+    "properties": {
+    "VCode": {
+        "dbName": "VCode",
+        "type": "bigint"
+    },
+    "Name": {
+        "dbName": "Name",
+        "type": "string",
+        "description": "Статья доходов"
+    },
+    "ArticleIn": {
+        "dbName": "ArticleIn",
+        "viewName": "",
+        "type": "string"
+        }
+    },
+    "details": {},
+    "rights": {
+    "create": ["super"],
+    "read": ["super"],
+    "update": ["super"],
+    "delete": ["super"]
+    }
+}

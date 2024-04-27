@@ -1,0 +1,37 @@
+<Form writeRoles='super' title='Поступление денежных средств'>
+    <ToolBar>
+        <Tool id="toolBarItemExit" caption="Закрыть" image="current-theme/images/leftNavBar/close.png" clicked='toolBarItemExit_clicked'/>
+        <Tool caption="Сохранить" id="toolBarItemSave" image="current-theme/images/leftNavBar/save.png" clicked="toolBarItemSave_clicked"/>
+    </ToolBar>
+    <Layout type='bootstrap' >
+        <DateTimeInput id="DateTimeInputDocumentDate" caption="Дата" captionWidth="1" editorWidth="1" />
+        <Group id='gr3' editorWidth='12' showBorder='false'>
+            <Grid caption='' id='GridDetail' editorWidth='6'
+            selectionMode='multiplerows' height='300px' cellClicked='cellClicked' cellPainter='Grid1_cellPainter' showAggregates='true' showStatusBar='true' filterable="true">
+            <Column text='Сумма' datafield='Sum' width='30%' cellsformat='D2' >
+                <NumberInput/>
+            </Column>
+            <Column text="Статья" datafield="Article"  width='30%'>
+                <Lookup dataSource='../models/ArticleIn.model.json'
+                    showValueMember='false' />
+            </Column>
+            <ColumnGroup name="group1" text='Файл'>
+                <Column text='Добавить' datafield='Add' width='10%' editable = 'false'>
+                    <GlyphTextBox imageRenderer='info_imageAdd'/>
+                </Column>
+                <Column text='Удалить' datafield='Delete' width='10%' editable = 'false'>
+                    <GlyphTextBox imageRenderer='info_imageDelete'/>
+                </Column>
+                <Column text='Просмотр' datafield='Read' width='10%' editable = 'false'>
+                    <GlyphTextBox imageRenderer='info_imageView'/>
+                </Column>
+                <Column text='Файл' datafield='file' visible="false" width='10%'>
+                    <TextBox/>
+                </Column>
+            </ColumnGroup>
+            </Grid>
+        </Group>
+    </Layout>
+</Form>
+
+

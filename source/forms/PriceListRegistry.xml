@@ -1,0 +1,39 @@
+<Form writeRoles="super" title='Прайс лист - Реестр'>
+ <ToolBar>
+    <Tool id="toolBarItemNew" caption="Создать" image="current-theme/images/leftNavBar/new.png" clicked='toolBarItemNewClick' />
+    <Tool id="toolBarItemRemove" caption="Удалить" image="current-theme/images/leftNavBar/trash.png" clicked='toolBarItemRemoveClick' />
+    <Tool caption='Период' id='toolBarItemSelectPeriod' image='current-theme/images/header/watch.png' clicked='toolBarItemSelectPeriod_clicked' />
+ </ToolBar>
+ <Layout>
+ <AnalyticalGrid id='grid' bind='*' viewName="PriceListForm"
+primaryKeyName='VCode' filterable="true" showFilterRow="true" width='100%'
+editorWidth='12' height="100%" sortable='true' selectionMode='checkbox'
+columnsResize='true'>
+ <Column text='Дата документа' datafield='DocumentDate'
+cellsformat='dd.MM.yyyy' width='10%' >
+ <DateTimeInput/>
+ </Column>
+ <ColumnGroup text='Создано' align='center' name='GroupCUser' >
+ <Column datafield='CDate' text='Дата' cellsformat='dd.MM.yyyy'
+width='5%'>
+ <DateTimeInput bindingMode='date' />
+ </Column>
+ <Column text='Автор' datafield='CUser' width='10%' >
+ <TextBox />
+ </Column>
+ </ColumnGroup>
+ <ColumnGroup text='Последнее изменение' align='center' name='GroupWUser' >
+ <Column datafield='WDate' text='Дата' cellsformat='dd.MM.yyyy' width='5%'
+>
+ <DateTimeInput bindingMode='date' />
+ </Column>
+ <Column text='Автор' datafield='WUser' width='10%' >
+ <TextBox />
+ </Column>
+ </ColumnGroup>
+ <Column text='Код' datafield='VCode' width='5%' >
+ <TextBox />
+ </Column>
+ </AnalyticalGrid>
+ </Layout>
+</Form>

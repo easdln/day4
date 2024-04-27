@@ -1,0 +1,11 @@
+<Form writeRoles='super' title='Статья дохода'>
+    <ToolBar>
+        <Tool id='TextBoxName' caption="Закрыть" image="current-theme/images/leftNavBar/close.png" clicked='toolBarItemExit_clicked'/>
+        <Tool caption="Сохранить" id="toolBarItemSave" image="current-theme/images/leftNavBar/save.png" clicked="toolBarItemSave_clicked"/>
+    </ToolBar>
+    <Layout type='bootstrap' >
+        <Group>
+            <TextBox caption="Наименование" id='TextBoxName' width='100%' captionWidth='1' editorWidth='4'/>
+        </Group>
+    </Layout>
+</Form>

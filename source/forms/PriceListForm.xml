@@ -1,0 +1,37 @@
+<Form writeRoles='super' title='Прайс лист'>
+ <ToolBar>
+ <Tool id="toolBarItemExit" caption="Закрыть" image="current-theme/images/leftNavBar/close.png" clicked='toolBarItemExit_clicked'/>
+ <Tool caption="Сохранить" id="toolBarItemSave" image="current-theme/images/leftNavBar/save.png" clicked="toolBarItemSave_clicked" />
+ </ToolBar>
+ <Layout type='bootstrap' >
+ <Group id='gr1' editorWidth='12' showBorder='true' >
+ <DateTimeInput caption='Дата' bind='DocumentDate' id='DateTimeInput1'
+format='dd.MM.yyyy' bindingMode='date' width='100%' captionWidth='1'
+editorWidth='2' />
+ </Group>
+ <Group id='gr2' editorWidth='12' >
+ <Grid caption='Товары' id='Grid1' bind='Detail' editorWidth='6'
+selectionMode='multiplecellsadvanced' height='400px' groupable='true'
+showAggregates='true' showStatusBar='true' cellClicked='Grid1_cellClicked'
+cellPainter='Grid1_cellPainter' cellValueChanged='Grid1_cellValueChanged' >
+ <ColumnGroup name="group1" text='Товар'>
+ <Column text='Группа' datafield='MaterialGroup' width='25%' >
+ <TextBox />
+ </Column>
+ <Column text='Наименование' datafield='Material' width='50%' >
+ <Lookup dataSource='../models/Material.model.json'
+showValueMember='false' />
+ </Column>
+ </ColumnGroup>
+ <Column text='Цена' datafield='Price' width='15%' cellsformat='D2' >
+ <NumberInput />
+ <ColumnAggregate type="avg" />
+ </Column>
+ <Column text="" datafield="Info" editable = 'false' width='40px'
+hint='Вывести информацию по товару' >
+ <GlyphTextBox imageRenderer='info_imageRenderer'/>
+ </Column>
+ </Grid>
+ </Group>
+ </Layout>
+</Form>

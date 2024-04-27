@@ -1,0 +1,13 @@
+{
+    "select": {
+        "text": "./AnalyticalForm_select.sql"
+    },
+    "parameters": {
+    },
+    "rights": {
+    "create": [],
+    "read": ["super"],
+    "update": [],
+    "delete": []
+    }
+}

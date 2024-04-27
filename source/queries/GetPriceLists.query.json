@@ -1,0 +1,15 @@
+{
+    "select": {
+        "text": "./GetPriceLists.sql",
+        "parameters": ["Material"]
+    },
+    "parameters": {
+        "Material": "bigint"
+    },
+    "rights": {
+        "create": [],
+        "read": ["super"],
+        "update": [],
+        "delete": []
+    }
+}
